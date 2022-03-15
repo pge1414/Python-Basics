@@ -52,9 +52,19 @@
 # print(liste)
 
 # #eine for schleife die alle 2er potenzen bis 8192 erstellt
-liste = []
+liste = [1]
 for i in range(14):
-    liste.append(i * 2)
+    liste.append(liste[i] * 2)
 
 print(liste)
-###
+#eine for schleife die folgende sternchenfigur  ausgibt
+#**********
+#*********
+#********
+#*******
+#******
+#*****
+#****
+#***
+#**
+#*
