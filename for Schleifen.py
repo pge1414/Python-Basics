@@ -52,11 +52,11 @@
 # print(liste)
 
 # #eine for schleife die alle 2er potenzen bis 8192 erstellt
-liste = [1]
-for i in range(14):
-    liste.append(liste[i] * 2)
+#liste = [1]
+#for i in range(13):
+    #liste.append(liste[i] * 2)
 
-print(liste)
+#print(liste)
 #eine for schleife die folgende sternchenfigur  ausgibt
 #**********
 #*********
@@ -68,3 +68,32 @@ print(liste)
 #***
 #**
 #*
+# for i in range(10):
+#     print('*')and print('*')and print('*')and print('*')and print('*')and print('*')and print('*')and print('*')and print('*')and print('*')
+
+#auf einem bauernhof werden 35 Köpfe une 94 Beine gezählt.
+#wie viele Kanienchen und wie viele Hüner leben dort???
+# from random import randint
+# beine = 94
+# köpfe = 35
+# huener_beine = 2
+# kanienchen_beine = 4
+# for i in range(10000000):
+#     x = randint(1, 20)
+#     y = randint(1, 20)
+#     erg_h = x*huener_beine + y*kanienchen_beine
+#     if erg_h == 94 and x +y == 35:
+#         print(huener_beine, kanienchen_beine)
+#         break
+
+beine = 94
+köpfe = 35
+huener_beine = 2
+kanienchen_beine = 4
+for h in range(36):
+    for k in range(36):
+        pa = h*huener_beine /2
+        pa2 = k*kanienchen_beine /4
+        ergebnis = h*huener_beine + k*kanienchen_beine
+        if ergebnis == beine and h +k == köpfe:
+            print(pa, pa2)
