@@ -1,27 +1,27 @@
 #dictionarys ergänzen listen um die möglichkeit nicht nur die elemente selbst du wählen sondern auch die indizes
 #sie bestehen schlüssel-werte-paaren
 
-dict1 = { "hund": "dog", "Katze": "cat"}
-dict1["fisch"] = "fish"
-dict1.update({"esel": "donkey", "löwe": "lion"})
-wert1 = dict1["Esel"]
-print(wert1)
-deutsch1 = "schlange"
-english1 = "snake"
-dict1[deutsch1] = englisch1
-print(dict1)
+# dict1 = { "hund": "dog", "Katze": "cat"}
+# dict1["fisch"] = "fish"
+# dict1.update({"esel": "donkey", "löwe": "lion"})
+# wert1 = dict1["Esel"]
+# print(wert1)
+# deutsch1 = "schlange"
+# english1 = "snake"
+# dict1[deutsch1] = englisch1
+# print(dict1)
 
-for key in dict1.keys():
-    print(key)
+# for key in dict1.keys():
+#     print(key)
 
-for value in dict.values():
-    print(value)
+# for value in dict.values():
+#     print(value)
 
-for key, value in dict.items():
-    print(key, value)
+# for key, value in dict.items():
+#     print(key, value)
 
-if "Katze" in dict1:
-    print("Katze"+ dict1["Katze"])
+# if "Katze" in dict1:
+#     print("Katze"+ dict1["Katze"])
 
 rohtext = "Goethe beginnt mit einer Würdigung von Steinbachs Werk, indem er den Gedanken verwirft, Steinbach aus Ehrerbietung ein Denkmal zu bauen, da er sich durch den Bau des Münsters bereits selbst ein Denkmal geschaffen habe. Als Goethe das erste Mal das Münster sah, war er von dem allgemein geltenden Vorurteil, alles, was gotisch ist, sei von willkürlichen Verzierungen erdrückt und überladen, eingenommen. Gotisch war für ihn, wie für die meisten seiner Zeitgenossen, alles, was sich nicht mit seiner Auffassung von Kunst vereinbaren ließ. Dieses Urteil wurde von seinen unerwarteten Empfindungen beim Anblick des Münsters entkräftet. Der Eindruck, dass alle Einzelheiten miteinander harmonierten, erfüllte seine Seele, und das Münster wirkte auf ihn wie etwas von Göttern Erschaffenes für die Ewigkeit. Somit wäre gotisch für Goethe kein passender Begriff, da er bei diesem Kunstwerk nicht genügend Ehrerbietung erzeuge."\
 
