@@ -94,4 +94,22 @@ for key in dict_wörter.keys():
         anzahl += 1
 print(anzahl)
 
+dict_g_wörter = {}
+for key, value in dict_wörter.items():
+    if key[0] == 'g':
+        dict_g_wörter.update({key: value})
+bisher_größte_anzahl2 = 0
+größtes_wort2 = ""
+for key, value in dict_g_wörter.items():
+    if value > bisher_größte_anzahl2:
+        bisher_größte_anzahl2 = value
+        größtes_wort2 = key
+print(größtes_wort2)
 
+liste = []
+for key in dict_wörter.keys():
+    if key[0] not in liste:
+        liste.append(key[0])
+print(liste)
+
+        
