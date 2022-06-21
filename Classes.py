@@ -66,19 +66,49 @@ class Safaripark:
         for tier in self.tiere:
             if self.tier == tierart:
                 anzahl_tierart += 1
-        return
+        return anzahl_tierart
+
+    def ist_leer(self) -> bool:
+        if len(self.tiere) == 0:
+            füllung_in_liste = False
+        return füllung_in_liste
+
 
 
     #Gibt das schwerste tier an
     def schwerste(self) -> Tier:
+        if self.ist_leer:
+            raise ValueError("Der zoo ist leer")
+        schwerstes_Tier = None
         for i in range(len(self.tiere)):
             for u in range(len(self.tiere)):
                 if self.tiere[i].gewicht < self.tiere[u].gewicht:
-                    break
-        
-        return self.tiere[i]
+                break
+            else:
+                schwerstes_Tier = self.tiere[i]
+    
+        return schwerstes_Tier
 
-            
+    def geburt(self) -> Tier:
+        gebährer = random.choice(self.tiere)
+        junges = gebährer.junges()
+        self.tiere.append(junges)
+        return gebährer.junges()
+
+    #Gibt eine liste mit allen im zoo vorkommenden Tierarten zurück
+    def tierarten(self) ->Tier:
+        artenliste = []
+        for tier in tierarten:
+            if tier.tierart not in tierarten:
+                artenliste.append(tier.tierart)
+        return tierarten
+
+    def häufigste_tierart(self) -> str:
+        for tier in tierarten:
+            return tier.anzahl.tierarten
+    
+    def häufigste_tierart(self) -> str:
+        pass
 
     #gibt das gesamtgewicht aller tiere zurück
 
@@ -96,4 +126,5 @@ tier3 = Tier("Gnu", [], ["Löwe"], 200.0, 190, "schwarz")
 tier4 = tier3.junges()
 print(tier4)
 safaripark = Safaripark('hahahahahh', [tier1, tier2, tier3], 100.00)
-print(schwerste(safaripark))
+
+
