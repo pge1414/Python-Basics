@@ -83,7 +83,7 @@ class Safaripark:
         for i in range(len(self.tiere)):
             for u in range(len(self.tiere)):
                 if self.tiere[i].gewicht < self.tiere[u].gewicht:
-                break
+                    break
             else:
                 schwerstes_Tier = self.tiere[i]
     
@@ -97,18 +97,31 @@ class Safaripark:
 
     #Gibt eine liste mit allen im zoo vorkommenden Tierarten zurück
     def tierarten(self) ->Tier:
-        artenliste = []
+        tierarten = []
         for tier in tierarten:
             if tier.tierart not in tierarten:
-                artenliste.append(tier.tierart)
+                tierarten.append(tier.tierart)
         return tierarten
-
-    def häufigste_tierart(self) -> str:
-        for tier in tierarten:
-            return tier.anzahl.tierarten
     
-    def häufigste_tierart(self) -> str:
-        pass
+    def häufigste_tierart(self, tierarten) -> str:
+        anzahl = 0
+        zuordnung = {}
+        for tier in tierarten:
+            if tier.tierart(tier) == tier2.tierart(tier2):
+                tier.anzahl += 1
+
+    def häufigste_tierart_ohne_dict(self) -> str:
+        häufigste_anzahl = 0
+        häufigste_tierart = ""
+        tierarten = self.tierarten()
+        for tierart in tierarten:
+            anzahl = self.anzahl_tierart(tierart)
+            if anzahl(tierart) > häufigste_anzahl:
+                häufigste_anzahl = anzahl
+                häufigste_tierart = tierart
+        return häufigste_tierart
+
+
 
     #gibt das gesamtgewicht aller tiere zurück
 
@@ -126,5 +139,4 @@ tier3 = Tier("Gnu", [], ["Löwe"], 200.0, 190, "schwarz")
 tier4 = tier3.junges()
 print(tier4)
 safaripark = Safaripark('hahahahahh', [tier1, tier2, tier3], 100.00)
-
-
+print(safaripark.häufigste_tierart_ohne_dict())
