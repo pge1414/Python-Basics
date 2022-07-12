@@ -1,9 +1,12 @@
-from spieler_mensch import spieler_mensch
+from spieler_mensch import Spieler_Mensch
+from spieler_computer_random import Spieler_Computer_Random
+from spieler_computer_schlau import Spieler_Computer_Schlau
 import random
 
 class Arena:
     def __init__(self):
         self.spielfeld = []
+        
 
     def __ausgabe(self):
         print(" " + self.spielfeld[0] + " | " + self.spielfeld[1] + " | " + self.spielfeld[2])
@@ -21,7 +24,6 @@ class Arena:
                 self.spielfeld[2] == self.spielfeld[5] == self.spielfeld[8] or \
                 self.spielfeld[0] == self.spielfeld[4] == self.spielfeld[8] or \
                 self.spielfeld[2] == self.spielfeld[4] == self.spielfeld[6]
-
 
     def spielen(self,spieler1, spieler2):
         
@@ -53,11 +55,27 @@ class Arena:
                 spiel_fertig = True
 
             spieler = spieler2 if spieler == spieler1 else spieler1
-            
+
+antwort = input("Möchtest du Mensch gegen Mensch oder gegen den Computer spielen?(Computer/Mensch)")
+
+if antwort == "Computer":
+
+    antwort_schwierigkeitsgrad = input("Welchen Schwierigkeitsgrad möchtest du wählen?(eazy/impossible)")
+    if antwort_schwierigkeitsgrad == "eazy":
+        a = Arena()
+        s1 = Spieler_Mensch("Spieler 1")
+        s2 = Spieler_Computer_Random("Computer")
+        a.spielen(s1, s2)
+
+    if antwort_schwierigkeitsgrad == "impossible":
+        a = Arena()
+        s1 = Spieler_Mensch("Spieler 1")
+        s2 = Spieler_Computer_Schlau("Computer")
+        a.spielen(s1, s2)
 
 
-        
-a = Arena()
-s1 = spieler_mensch("Murat")
-s2 = spieler_mensch("Mehmet")
-a.spielen(s1, s2)
+elif antwort == "Mensch":
+    a = Arena()
+    s1 = Spieler_Mensch("Spieler 1")
+    s2 = Spieler_Mensch("Spieler 2")
+    a.spielen(s1, s2)
