@@ -36,7 +36,7 @@ class Arena:
             spieler2.symbol = "o"
         else:
             spieler2.symbol = "x"
-            spieler1.symbol = "y"
+            spieler1.symbol = "o"
 
 
         spiel_fertig = False
