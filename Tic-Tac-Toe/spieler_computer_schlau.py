@@ -20,6 +20,7 @@ class Spieler_Computer_Schlau:
         return [freies_feld for freies_feld in spielfeld if freies_feld not in ["x", "o"]]
 
     def __bewertung(self, spielfeld,symbol):
+        
         # if symbol == self.symbol:
         #     if self.__gewinnprüfung(spielfeld):
         #         return -(len(self.__freie_felder(spielfeld))+1)
