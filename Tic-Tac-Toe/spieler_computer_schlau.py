@@ -55,23 +55,38 @@ class Spieler_Computer_Schlau:
         #                         return {bewertung: freies_feld}
         #                     if not self.gewinnprüfung(spielfeld):
         #                         break
+        
+        if symbol == self.symbol:
+            if len(self.__freie_felder(spielfeld)) == 0:
+                return 0
+            freies_feld = self.__freie_felder(spielfeld)
+            if self.__gewinnprüfung(spielfeld):
+                return int(len(self.__freie_felder(spielfeld)))
+            if not self.gewinnprüfung(spielfeld):
+                freies_feld_index = freies_feld.index(self.__freie_felder())
+                self.__freie_felder(spielfeld).pop(freies_feld_index)
+                if symbol == self.symbol:
+                    if self.__gewinnprüfung(spielfeld):
+                        return int(-len(self.__freie_felder(spielfeld)))
+                    if not self.gewinnprüfung(spielfeld):
+                        freies_feld_index = freies_feld.index(self.__freie_felder())
+                        self.__freie_felder(spielfeld).pop(freies_feld_index)
+                        return(freies_feld)
 
-            
-                                
-                
+
 
     def minimax(self, spielfeld):
-            # max = -10
-            # bestes_feld = None
-            # for freies_feld in self.__freie_felder(spielfeld):
-            #     spielfeld[int(freies_feld) - 1] = self.symbol
-            #     bewertung = self.__bewertung(spielfeld, self.symbol_gegner)
-            #     if bewertung > max:
-            #         max = bewertung
-            #         bestes_feld = freies_feld
-            #     spielfeld[int(freies_feld)-1] = freies_feld
-            bestes_feld = self.symbol
-            return bestes_feld
+        max = -10
+        bestes_feld = None
+        for freies_feld in self.__freie_felder(spielfeld):
+            spielfeld[int(freies_feld) - 1] = self.symbol
+            bewertung = self.__bewertung(spielfeld, self.symbol_gegner)
+            if bewertung > max:
+                max = int(bewertung)
+                bestes_feld = freies_feld
+            spielfeld[int(freies_feld)-1] = freies_feld
+        bestes_feld = self.symbol
+        return bestes_feld
 
     def zug(self, spielfeld):
         self.symbol_gegner = "x" if self.symbol == "o" else "o"
