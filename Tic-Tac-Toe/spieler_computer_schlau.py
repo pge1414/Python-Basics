@@ -71,7 +71,7 @@ class Spieler_Computer_Schlau:
                     if not self.gewinnprüfung(spielfeld):
                         freies_feld_index = freies_feld.index(self.__freie_felder())
                         self.__freie_felder(spielfeld).pop(freies_feld_index)
-                        return(freies_feld)
+                        return freies_feld
 
 
 
