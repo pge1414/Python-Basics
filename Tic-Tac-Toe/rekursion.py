@@ -22,19 +22,21 @@ from lib2to3.pytree import NegatedPattern
 # print(quersumme_string(46))
 
 #hier werden keine string methoden verwendet, dafür die arithmethischen operatoren % steht für modulo // für integer division
-def quersumme_arithmethisch(n : int) -> int:
-    n = str()
-    quersumme_alt = 0
-    if n[i] == len(n) - 1:
-        return 0
-    quersumme_alt = int(n) +quersumme_alt
-    n = n[i] + 1
-    return quersumme_alt
+# def quersumme_arithmethisch(n : int) -> int:
+#     n = str()
+#     quersumme_alt = 0
+#     if n[i] == len(n) - 1:
+#         return 0
+#     quersumme_alt = int(n) +quersumme_alt
+#     n = n[i] + 1
+#     return quersumme_alt
 
-print(quersumme_arithmethisch(114))
+# print(quersumme_arithmethisch(114))
 
 
 #eine funktion die true zurückgibt falls ein wort ein palindrom ist
 def palindrom(wort: str) -> bool:
-    pass
+    return wort.index[3]
+print(palindrom("halsie"))
+
 
