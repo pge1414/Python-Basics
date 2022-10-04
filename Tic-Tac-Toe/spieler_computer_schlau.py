@@ -75,12 +75,13 @@ class Spieler_Computer_Schlau:
 
 
 
+
     def minimax(self, spielfeld):
         max = -10
         bestes_feld = None
         for freies_feld in self.__freie_felder(spielfeld):
             spielfeld[int(freies_feld) - 1] = self.symbol
-            bewertung = self.__bewertung(spielfeld, self.symbol_gegner)
+            bewertung = int(self.__bewertung(spielfeld, self.symbol_gegner))
             if bewertung > max:
                 max = int(bewertung)
                 bestes_feld = freies_feld

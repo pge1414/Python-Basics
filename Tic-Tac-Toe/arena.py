@@ -56,26 +56,26 @@ class Arena:
 
             spieler = spieler2 if spieler == spieler1 else spieler1
 
-antwort = input("Möchtest du Mensch gegen Mensch oder gegen den Computer spielen?(Computer/Mensch)")
+# antwort = input("Möchtest du Mensch gegen Mensch oder gegen den Computer spielen?(Computer/Mensch)")
 
-if antwort == "Computer":
+# if antwort == "Computer":
 
-    antwort_schwierigkeitsgrad = input("Welchen Schwierigkeitsgrad möchtest du wählen?(eazy/impossible)")
-    if antwort_schwierigkeitsgrad == "eazy":
-        a = Arena()
-        s1 = Spieler_Mensch("Spieler 1")
-        s2 = Spieler_Computer_Random("Computer")
-        a.spielen(s1, s2)
+#     antwort_schwierigkeitsgrad = input("Welchen Schwierigkeitsgrad möchtest du wählen?(eazy/impossible)")
+#     if antwort_schwierigkeitsgrad == "eazy":
+#         a = Arena()
+#         s1 = Spieler_Mensch("Spieler 1")
+#         s2 = Spieler_Computer_Random("Computer")
+#         a.spielen(s1, s2)
 
-    if antwort_schwierigkeitsgrad == "impossible":
-        a = Arena()
-        s1 = Spieler_Mensch("Spieler 1")
-        s2 = Spieler_Computer_Schlau("Computer")
-        a.spielen(s1, s2)
+#     if antwort_schwierigkeitsgrad == "impossible":
+a = Arena()
+s1 = Spieler_Mensch("Spieler 1")
+s2 = Spieler_Computer_Schlau("Computer")
+a.spielen(s1, s2)
 
 
-elif antwort == "Mensch":
-    a = Arena()
-    s1 = Spieler_Mensch("Spieler 1")
-    s2 = Spieler_Mensch("Spieler 2")
-    a.spielen(s1, s2)
+# elif antwort == "Mensch":
+#     a = Arena()
+#     s1 = Spieler_Mensch("Spieler 1")
+#     s2 = Spieler_Mensch("Spieler 2")
+#     a.spielen(s1, s2)

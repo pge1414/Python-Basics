@@ -1,5 +1,6 @@
 #eine funktion die die fakultät von n berechnet und zurückgibt ohne dass dabei schleifen verwendet werden
 from lib2to3.pytree import NegatedPattern
+from re import I
 
 
 # def fak(n : int) -> int:
@@ -23,20 +24,24 @@ from lib2to3.pytree import NegatedPattern
 
 #hier werden keine string methoden verwendet, dafür die arithmethischen operatoren % steht für modulo // für integer division
 # def quersumme_arithmethisch(n : int) -> int:
-#     n = str()
-#     quersumme_alt = 0
-#     if n[i] == len(n) - 1:
-#         return 0
-#     quersumme_alt = int(n) +quersumme_alt
-#     n = n[i] + 1
-#     return quersumme_alt
+#     c_alt = 0
+#     c = n % 10
+#     n =  n // 10
+#     c_alt = c + c_alt
+#     if len(str(n)) == 0:
+#         return c_alt
+
 
 # print(quersumme_arithmethisch(114))
 
 
 #eine funktion die true zurückgibt falls ein wort ein palindrom ist
-def palindrom(wort: str) -> bool:
-    return wort.index[3]
-print(palindrom("halsie"))
+# def palindrom(wort: str) -> bool:
+#     wort = str(wort)
+#     wort_stelle = wort[wort + 1]
+
+
+# print(palindrom("hah"))
+
 
 
