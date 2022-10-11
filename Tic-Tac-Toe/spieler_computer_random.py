@@ -6,7 +6,7 @@ class Spieler_Computer_Random:
         self.name = name
         self.symbol = None
 
-    def zug(self,spielfeld,platz):
+    def zug(self,spielfeld):
         gültige_eingabe = False
         while not gültige_eingabe:
             feld = random.choice(spielfeld)

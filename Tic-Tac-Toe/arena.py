@@ -10,9 +10,9 @@ class Arena:
 
     def __ausgabe(self):
         print(" " + self.spielfeld[0] + " | " + self.spielfeld[1] + " | " + self.spielfeld[2])
-        print("---------")
+        print("-----------")
         print(" " + self.spielfeld[3] + " | " + self.spielfeld[4] + " | " + self.spielfeld[5])
-        print("---------")
+        print("-----------")
         print(" " + self.spielfeld[6] + " | " + self.spielfeld[7] + " | " + self.spielfeld[8])
 
     def __gewinnprüfung(self):

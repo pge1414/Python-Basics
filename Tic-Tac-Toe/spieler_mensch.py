@@ -1,10 +1,10 @@
 
 class Spieler_Mensch:
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         self.name = name
         self.symbol = None
 
-    def zug(self,spielfeld,platz) -> int:
+    def zug(self,spielfeld: list) -> int:
         gültige_eingabe = False
         while not gültige_eingabe:
             feld = input("spieler" + self.name + ", Feld eingeben:")
@@ -12,4 +12,4 @@ class Spieler_Mensch:
                 gültige_eingabe = True
             else:
                 print("Ungültig")
-        return feld, platz
+        return feld
