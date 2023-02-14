@@ -1,6 +1,8 @@
 #eine funktion die die fakultät von n berechnet und zurückgibt ohne dass dabei schleifen verwendet werden
+from importlib.resources import read_text
 from lib2to3.pytree import NegatedPattern
 from re import I
+from turtle import rt
 
 
 # def fak(n : int) -> int:
@@ -37,11 +39,23 @@ from re import I
 
 #eine funktion die true zurückgibt falls ein wort ein palindrom ist
 # def palindrom(wort: str) -> bool:
-#     wort = str(wort)
-#     wort_stelle = wort[wort + 1]
+#     stellen = len(wort)
+#     wort_stelle = palindrom(str(wort_stelle) + str(wort[stellen-1]))
+#     if stellen == 0:
+#         if wort == wort_stelle: 
+#             return 1 
+#         else: 
+#             return 0
 
+# print(palindrom("dkdk"))
 
-# print(palindrom("hah"))
+def fib(o: int)-> int:
+    if o == 0:
+        return 0
+    if o == 1:
+        return 1
+    return fib(o-1)+fib(o-2)
 
+    
 
-
+print(fib(8))
