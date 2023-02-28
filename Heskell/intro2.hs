@@ -34,8 +34,14 @@ anzahlen(x:y:ys)
     | otherwise = 1: anzahlen (y:ys)
     where anzahlenTail = anzahlen (y:ys)
 
-lauflängenkodierung :: [Char] -> [(Int,Char)]
-lauflängenkodierung [] = []
-lauflängenkodierung(x:y:ys)
-    | x == y = (2,x): lauflängenkodierung ys
-    | otherwise = (1,x):(1,y): lauflängenkodierung ys
+--packen :: [Char] -> [[Char]]
+--packen [] = []
+--packen [x] = [[x]]
+--packen(x:y:ys) 
+--    | x == y = x:head packenTail:tail packenTail
+--    | otherwise = [x]:packenTail
+--    where packenTail = packen (y:ys)
+
+flipper :: (a -> b -> c) -> (b -> a -> c)
+flipper f x y = f y x
+
