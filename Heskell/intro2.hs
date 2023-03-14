@@ -42,6 +42,25 @@ anzahlen(x:y:ys)
 --    | otherwise = [x]:packenTail
 --    where packenTail = packen (y:ys)
 
+addiere :: a -> b -> c
+addiere a b = a + b
+
+evenn :: a -> c
+evenn a 
+    | mod a 2 == 0 = a
+    | otherwise = 0
+
 flipper :: (a -> b -> c) -> (b -> a -> c)
 flipper f x y = f y x
 
+folder :: (a -> t -> t) -> t -> [a] -> t
+folder f t [] = t
+folder f t [x] = f t x
+folder f t (x:y:ys) = folder f t (ys ++ [f x y])
+
+quicksort :: Ord a => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) = quicksort (filter (<=x) xs) ++ [x] ++ quicksort (filter (>x) xs)
+
+summe:: Int 
+summe = folder addiere 0 (evenn [1..20000])
