@@ -1,6 +1,6 @@
 folder :: (Int -> Int -> Int) -> Int -> [Int] -> Int
 folder f b [] = b
-folder f b [x] = f b x
+folder f b [x] = f b
 folder f b (x:y:ys) = folder f b (ys ++ [f x y])
 
 addiere :: Int-> Int -> Int
@@ -23,8 +23,16 @@ quicksort (x:xs) = quicksort (filter (<=x) xs) ++ [x] ++ quicksort (filter (>x) 
 summe:: Int 
 summe = folder addiere 0 (evenn [1..20000])
 
-enthalten :: [a] -> a -> Bool
-enthalten [] a = False
-enthalten (x:xs)
-    | filter x a == True = True
-    | otherwise = enthalten (filter xs a)
+--enthalten :: [a] -> a -> Bool
+--enthalten [] a = False
+--enthalten (x:xs)
+--    | filter x a == True = True
+--    | otherwise = enthalten (filter xs a)
+
+--fakultät :: Int -> Int
+--fakultät 0 = 1
+--fakultät = foldl (*) 1 [1..n]
+
+mapper :: (a -> a) -> [a] -> [a]
+mapper _ [] = []
+mapper f (x:xs) = f x : mapper f xs
