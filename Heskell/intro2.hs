@@ -53,10 +53,10 @@ evenn a
 flipper :: (a -> b -> c) -> (b -> a -> c)
 flipper f x y = f y x
 
-folder :: (a -> t -> t) -> t -> [a] -> t
-folder f t [] = t
-folder f t [x] = f t x
-folder f t (x:y:ys) = folder f t (ys ++ [f x y])
+folder :: (a -> b -> b) -> b -> [a] -> b
+folder f b [] = b
+folder f b [x] = f b x
+folder f b (x:y:ys) = folder f b (ys ++ [f x y])
 
 quicksort :: Ord a => [a] -> [a]
 quicksort [] = []
