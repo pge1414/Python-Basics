@@ -14,13 +14,13 @@ enthalten f (x:xs)
     | filter (==f) (x:xs) == [f] = True 
     | otherwise = False
 
-quadrat :: Num a => Eq a => Fractional a => a -> a -> a
+quadrat :: Eq a => Fractional a => a -> a -> a
 quadrat n q
-    | q*q == n = q
+    | n/q == q = q
     | otherwise = quadrat n ((q + n/q) / 2)
 
-eratosthenes :: Num a x => Eq a => n -> [a]
-eratosthenes 0 = 0
-eratosthenes a
-    |  mod a 2 == 0 = a && filter 1 (\mod x a /= 0) [1..n]
-    | otherwise = eratosthenes a
+sieb :: [Int]-> [Int]
+sieb (x:xs) = filter (\y -> mod y x /= 0) xs
+
+prime :: [Int]
+prime = map head (iterate sieb [2..])
